@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset
+    name="Laravel and similar phpmd ruleset"
+    xmlns="http://pmd.sf.net/ruleset/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+    xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>
+        FIXME: ルールを記載
+    </description>
+    <!-- exclude patterns -->
+    <exclude-pattern>node_modules</exclude-pattern>
+    <exclude-pattern>resources</exclude-pattern>
+    <exclude-pattern>storage</exclude-pattern>
+    <exclude-pattern>vendor</exclude-pattern>
+    <exclude-pattern>database/migrations</exclude-pattern>
+</ruleset>

@@ -54,6 +54,9 @@
         ],
         "cs-fixer" : [
             "php-cs-fixer fix -v --ansi"
+        ],
+        "phpmd" : [
+            "phpmd . text ruleset.xml --suffixes php"
         ]
     },
     "config": {
