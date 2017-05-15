@@ -104,3 +104,9 @@ npm-debug.log
 .php-version
 .node-version
 .nvmrc
+
+# Laravel Homestead
+/.vagrant
+/Vagrantfile
+/after.sh
+/aliases
