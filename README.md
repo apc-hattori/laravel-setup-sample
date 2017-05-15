@@ -69,7 +69,18 @@ the IP or name of your host only network so that it no longer matc
 a bridged or non-hostonly network.
 ```
 
-hosts ファイルを書き換える
+別ターミナルを開きVM内でデータベーススキーマを生成する
+
+```
+vagrant ssh
+# これ移行はVM側での処理
+
+cd /vagrant
+
+php artisan migrate
+```
+
+ローカルマシンの hosts ファイルを書き換える
 
 ```
 <Homestead.yamlに記載したip> laravel-setup-sample
