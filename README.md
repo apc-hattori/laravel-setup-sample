@@ -93,6 +93,15 @@ php artisan migrate
 コミット前に下記コマンドを実行し問題を解決すること
 
 ```
+# PHPユニットテスト (VM側で実行)
+composer run test
+
+# JavaScript ユニットテスト
+yarn run test
+
+# 変更があるたびに JavaScript ユニットテスト実行する場合
+yarn run test:watch
+
 # コードの問題点を表示
 composer run phpmd
 
