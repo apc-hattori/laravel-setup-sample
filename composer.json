@@ -57,6 +57,9 @@
         ],
         "phpmd" : [
             "phpmd . text ruleset.xml --suffixes php"
+        ],
+        "test" : [
+            "phpunit --colors=always"
         ]
     },
     "config": {
