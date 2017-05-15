@@ -1,25 +1,37 @@
+const { config } = require('laravel-mix');
+config.options.babel.plugins = config.options.babel.plugins || [];
+config.options.babel.plugins.push('babel-plugin-espower');
+
+const webpackConf = require('laravel-mix/setup/webpack.config.js');
+delete webpackConf.entry;
+webpackConf.module.exprContextCritical = false;
+
 // Karma configuration
-// Generated on Mon May 15 2017 22:23:22 GMT+0900 (JST)
 
 module.exports = function (config) {
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
-        basePath: '',
+        basePath: 'resources/assets/js',
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
         frameworks: ['mocha'],
 
         // list of files / patterns to load in the browser
-        files: [],
+        files: [
+            { pattern: 'tests/**/*.js', watched: false },
+        ],
 
         // list of files to exclude
         exclude: [],
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-        preprocessors: {},
+        preprocessors: {
+            'app.js': ['webpack'],
+            'tests/**/*.spec.js': ['webpack'],
+        },
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
@@ -45,10 +57,13 @@ module.exports = function (config) {
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
-        singleRun: false,
+        singleRun: true,
 
         // Concurrency level
         // how many browser should be started simultaneous
         concurrency: Infinity,
+
+        // Webpack Configuration
+        webpack: webpackConf,
     });
 };
