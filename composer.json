@@ -50,6 +50,9 @@
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "php artisan key:generate",
             "homestead make"
+        ],
+        "cs-fixer" : [
+            "php-cs-fixer fix -v --ansi"
         ]
     },
     "config": {
