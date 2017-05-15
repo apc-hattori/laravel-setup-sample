@@ -93,9 +93,12 @@ php artisan migrate
 コミット前に下記コマンドを実行し問題を解決すること
 
 ```
-# コード規約に合うように修正
-composer run cs-fixer
-
 # コードの問題点を表示
 composer run phpmd
+
+# コード規約に合うように修正
+composer run cs-fixer
+yarn run eslint:fix
+
+# 自動修正できない部分は手動で対応の必要がある
 ```
