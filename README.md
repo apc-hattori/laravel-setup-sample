@@ -76,3 +76,15 @@ hosts ファイルを書き換える
 ```
 
 ブラウザで http://laravel-setup-sample を開く
+
+## その他
+
+コミット前に下記コマンドを実行し問題を解決すること
+
+```
+# コード規約に合うように修正
+composer run cs-fixer
+
+# コードの問題点を表示
+composer run phpmd
+```
