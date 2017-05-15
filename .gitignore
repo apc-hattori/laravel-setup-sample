@@ -1,11 +1,106 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
-/.idea
-/.vagrant
+# common
+bin/
+lib/
+logs/
+tmp/
+
+# java
+*.class
+*.jar
+*.war
+
+# sbt specific
+dist/*
+lib_managed/
+project/boot/
+project/build/
+project/plugins/
+project/project/
+target/
+
+# Scala-IDE specific
+.scala_dependencies
+
+# ensime
+.ensime_lucene
+.ensime
+
+# cscope
+cscope.files
+cscope.in.out
+cscope.out
+cscope.po.out
+
+# for eclipse
+.classpath
+.metadata
+.project
+.settings
+jrebel.lic
+
+# intellij
+*.eml
+*.iml
+*.ipr
+*.iws
+.*.sw?
+.idea
+.idea_modules
+bin/
+
+# SublimeText
+.tag
+.history
+
+# VC++
+*.cache
+*.exp
+*.idb
+*.ilk
+*.ipch
+*.lastbuildstate
+*.msi
+*.obj
+*.opensdf
+*.pdb
+*.sdf
+*.sln.docstates
+*.suo
+*.tlog
+*.unsuccessfulbuild
+*.user
+*.wixpdb
+
+Debug/
+Release/
+
+# Playframework
+*.eml
+RUNNING_PID
+dist/
+logs
+modules
+server.pid
+test-result
+
+# Laravel
+.env
+.env.*.php
+.env.php
 Homestead.json
 Homestead.yaml
+app/storage/
+bootstrap/compiled.php
+public/hot
+public/storage
+storage/*.key
+vendor
+
+# npm
+node_modules
 npm-debug.log
-.env
+
+# version management
+.php-version
+.node-version
+.nvmrc
