@@ -91,6 +91,13 @@ php artisan migrate
 
 ブラウザで http://laravel-setup-sample を開く
 
+# 停止
+
+```shell
+# ローカルマシン側で実行
+vagrant halt
+```
+
 ## その他
 
 コミット前に下記コマンドを実行し問題を解決すること
