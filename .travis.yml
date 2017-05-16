@@ -20,6 +20,7 @@ install:
     - composer install
     - yarn
 before_script:
+    - psql -c 'create database travis_ci_test;' -U postgres
     - php artisan migrate
 script:
     - composer run test
