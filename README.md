@@ -2,6 +2,7 @@ laravel-setup-sample
 ====================
 
 [![CircleCI](https://circleci.com/gh/apc-hattori/laravel-setup-sample.svg?style=svg)](https://circleci.com/gh/apc-hattori/laravel-setup-sample)
+[![Build Status](https://travis-ci.org/apc-hattori/laravel-setup-sample.svg?branch=master)](https://travis-ci.org/apc-hattori/laravel-setup-sample)
 
 Laravelを使ったサンプルアプリです。
 構築の仕方はコミットログを参照してください。
