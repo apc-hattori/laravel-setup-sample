@@ -1,0 +1,30 @@
+machine:
+    php:
+        version: 7.1.3
+    node:
+        version: 6.10.2
+    services:
+        - postgresql
+    environment:
+        APP_ENV: testing
+        APP_KEY: base64:K0PZBKahKAAuC9yLK9bqDrA2FFD32AimZn+RcUJ7kHU=
+        NODE_ENV: test
+        DB_CONNECTION: pgsql
+        DB_HOST: 127.0.0.1
+        DB_PORT: 5432
+        DB_DATABASE: circle_test
+        DB_USERNAME: ubuntu
+        DB_PASSWORD:
+dependencies:
+    pre:
+        - npm install -g yarn
+    override:
+        - composer install
+        - yarn
+database:
+    override:
+        - php artisan migrate
+test:
+  override:
+        - composer run test
+        - yarn run test
