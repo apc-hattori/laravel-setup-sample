@@ -1,0 +1,26 @@
+language: php
+php:
+    - 7.1
+services:
+    - postgresql
+env:
+    APP_ENV: testing
+    APP_KEY: base64:K0PZBKahKAAuC9yLK9bqDrA2FFD32AimZn+RcUJ7kHU=
+    NODE_ENV: test
+    DB_CONNECTION: pgsql
+    DB_HOST: 127.0.0.1
+    DB_PORT: 5432
+    DB_DATABASE: travis_ci_test
+    DB_USERNAME: postgres
+    DB_PASSWORD:
+before_install:
+    - nvm install 6.10.2
+    - npm install -g yarn
+install:
+    - composer install
+    - yarn
+before_script:
+    - php artisan migrate
+script:
+    - composer run test
+    - yarn run test
