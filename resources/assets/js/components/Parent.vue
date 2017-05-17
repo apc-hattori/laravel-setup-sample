@@ -3,10 +3,12 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Example Component</div>
+                    <div class="panel-heading">Parent Component</div>
 
                     <div class="panel-body">
                         {{ message }}
+                        <child1></child1>
+                        <child2></child2>
                     </div>
                 </div>
             </div>
@@ -19,10 +21,7 @@
 
     export default {
         data () {
-            return store.example;
-        },
-        mounted () {
-            console.log('Component mounted.');
+            return store.parent;
         },
     };
 </script>
